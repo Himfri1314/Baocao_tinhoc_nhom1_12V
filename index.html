@@ -63,14 +63,13 @@
     gap: 40px;
 }
 /* Khung thông tin */
-.card {
-   width: 200px;
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+.card img {
+    width: 100%;
+    height: auto; 
+    max-height: 120px; /* chỉnh số này để ảnh to/nhỏ */
+    object-fit: cover;
+    border-radius: 15px;
+}
 }
 .card:hover {
     transform: translateY(-5px);
@@ -228,6 +227,7 @@
     </main>
   </div>
 </body>
+
 
 
 
