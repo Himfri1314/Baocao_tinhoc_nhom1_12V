@@ -4,133 +4,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-  <style>
+ <style>
 body {
     font-family: sans-serif;
     margin: 0;
     background-color: #f0f0f0;
 }
-.navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    width: fit-content; /* Giữ navbar gọn gàng */
-}
-.nav-container {
+/* MENU CHÍNH */
+.menu {
     display: flex;
-    position: relative;
+    background: #fff;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.nav-item {
+.menu-item {
+    position: relative;
     padding: 15px 20px;
     cursor: pointer;
-    color: #555;
-    text-transform: uppercase;
-    font-size: 14px;
-    text-decoration: none; /* Bỏ gạch chân link */
-    display: flex;
-    align-items: center;
-    position: relative;
+    color: #243B9A;
+    font-weight: bold;
 }
-.nav-item:hover {
-    color: #000;
+.menu-item a {
+    color: #243B9A;
+    text-decoration: none;
 }
-/* Tab active có đường kẻ màu cam bên dưới */
-.nav-item.active {
-    color: #000;
+.menu-item:hover,
+.menu-item a:hover {
+    color: #6699CC;
 }
-.nav-item.active::after {
-    content: '';
+/* DROPDOWN */
+.dropdown {
+    display: none;
     position: absolute;
-    bottom: 0;
+    top: 100%;
     left: 0;
-    right: 0;
-    height: 3px;
-    background-color: #6699CC; /* Màu cam */
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 99;
 }
-.dropdown-icon {
-    margin-left: 5px;
-    font-size: 10px;
-    color: #999;
-}
-/* Dropdown Content Styling (Hiển thị ngay dưới tab active) */
-.dropdown-content {
-    display: block; /* Hiển thị nội dung dropdown */
-    position: absolute;
-    top: 100%; /* Đặt ngay bên dưới nav-container */
-    left: 0; /* Căn lề trái theo nav-container */
-    background-color: #fff;
-    min-width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    border-top: 1px solid #eee; /* Đường viền trên */
-}
-.dropdown-content a {
-    color: #666;
-    padding: 12px 20px;
-    text-decoration: none;
+.dropdown a {
     display: block;
+    padding: 12px 20px;
+    color: #243B9A;
+    text-decoration: none;
     border-bottom: 1px solid #eee;
-    font-size: 16px;
-    text-transform: none; /* Bỏ uppercase cho các mục con */
 }
-.dropdown-content a:hover {
-    background-color: #f9f9f9;
+.dropdown a:hover {
+    background: #f0f0f0;
     color: #000;
 }
-</style>
-</body>
-    <div class="menu">
-       <div class="menu-item">
-      <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">TRANG CHỦ</a>
-       </div>
-        <div class="menu-item">
-            THÀNH VIÊN
-            <div class="dropdown">
-                <a href="#">PHƯƠNG DUYÊN</a>
-                <a href="#">MINH CHÂU</a>
-                <a href="#">KHẢ HÂN</a>
-                <a href="#">QUỲNH NHƯ</a>
-            </div>
-        </div>
-        <div class="menu-item">
-            TÀI LIỆU
-            <div class="dropdown">
-                <a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a>
-                <a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a>
-                <a href="https://himfri1314.github.io/bai9_nhom1/">BÀI 9</a>
-                <a href="https://himfri1314.github.io/bai10_nhom1/">BÀI 10</a>
-                <a href="https://himfri1314.github.io/bai11_nhom1/">BÀI 11</a>
-                <a href="#">BÀI 12</a>
-                <a href="#">BÀI 13</a>
-                <a href="#">BÀI 14</a>
-                <a href="#">BÀI 15</a>
-                <a href="#">BÀI 16</a>
-                <a href="#">BÀI 17</a>
-                <a href="#">BÀI 18</a>
-            </div>
-        </div>
-</body>
-    <style>
-    /* Đổi màu chữ menu chính */
-.navbar a {
-    color: #243B9A;   /* Màu chữ – đổi tùy ý */
-    text-decoration: none;
-}
-/* Đổi màu khi hover */
-.navbar a:hover {
-    color: #6699CC;  /* Gạch chân */
-}
-/* Đổi màu chữ trong menu xổ xuống */
-.dropdown-menu li {
-    color: #243B9A;      /* Màu chữ cho danh sách con */
-    padding: 10px 20px;
-}
-/* Đổi màu khi hover vào mục con */
-.dropdown-menu li:hover {
-    color: #000;      /* Đậm hơn khi di chuột */
+/* HIỂN THỊ DROPDOWN KHI HOVER */
+.menu-item:hover .dropdown {
+    display: block;
 }
 </style>
-  </body>
+<body>
+<div class="menu">
+    <div class="menu-item">
+        <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">TRANG CHỦ</a>
+    </div>
+    <div class="menu-item">
+        THÀNH VIÊN
+        <div class="dropdown">
+            <a href="#">PHƯƠNG DUYÊN</a>
+            <a href="#">MINH CHÂU</a>
+            <a href="#">KHẢ HÂN</a>
+            <a href="#">QUỲNH NHƯ</a>
+        </div>
+    </div>
+    <div class="menu-item">
+        TÀI LIỆU
+        <div class="dropdown">
+            <a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a>
+            <a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a>
+            <a href="https://himfri1314.github.io/bai9_nhom1/">BÀI 9</a>
+            <a href="https://himfri1314.github.io/bai10_nhom1/">BÀI 10</a>
+            <a href="https://himfri1314.github.io/bai11_nhom1/">BÀI 11</a>
+            <a href="#">BÀI 12</a>
+            <a href="#">BÀI 13</a>
+            <a href="#">BÀI 14</a>
+            <a href="#">BÀI 15</a>
+            <a href="#">BÀI 16</a>
+            <a href="#">BÀI 17</a>
+            <a href="#">BÀI 18</a>
+        </div>
+    </div>
+</div>
+</body>
   <body>
      <!-- Banner -->
     <div class="banner">
