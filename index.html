@@ -6,48 +6,57 @@
   <body>
   <style>
 body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-    }
-    /* ===== MENU CHÍNH ===== */
-    .menu {
-        display: flex;
-        gap: 40px;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .menu-item {
-        position: relative;
-        cursor: pointer;
-    }
-    .menu-item:hover .dropdown {
-        display: block;
-    }
-    /* ===== DROPDOWN ===== */
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 28px;
-        left: 0;
-        width: 260px;
-        background: #ffffff;
-        padding: 20px 25px;
-        border-radius: 4px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    }
-    .dropdown a {
-        display: block;
-        text-decoration: none;
-        font-size: 17px;
-        color: #888;
-        padding: 14px 0;
-    }
-    .dropdown a + a {
-        border-top: 1px solid #e5e5e5;
-    }
-    .dropdown a:hover {
-        color: #333;
-    }
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== THANH MENU CHÍNH ===== */
+.navbar {
+    display: flex;
+    gap: 60px;
+    padding: 15px 40px;
+    background: #fff;
+    font-weight: bold;
+}
+.nav-item {
+    position: relative;
+    cursor: pointer;
+}
+.nav-item > a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+}
+/* ===== MENU CON (dropdown) ===== */
+.dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 330px;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    /* hiệu ứng trượt */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+/* khi hover mở ra */
+.nav-item:hover .dropdown {
+    max-height: 600px;   /* đủ để mở hết 4 dòng */
+}
+/* ===== MỤC BÊN TRONG MENU CON ===== */
+.dropdown li {
+    list-style: none;
+    padding: 15px 0;
+    font-size: 19px;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+.dropdown li:last-child {
+    border-bottom: none;
+}
 </style>
 </body>
     <div class="menu">
@@ -331,4 +340,5 @@ body {
     </main>
   </div>
 </body>
+
 
