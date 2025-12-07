@@ -5,57 +5,52 @@
   </head>
   <body>
   <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-/* ====== MENU CHÍNH ====== */
-nav {
+/* Thanh menu */
+.navbar {
     background: white;
-    padding: 15px 40px;
+    padding: 15px 20px;
+    font-family: Arial;
+    border-bottom: 1px solid #eee;
+}
+.navbar ul {
+    list-style: none;
     display: flex;
     gap: 40px;
-    font-weight: bold;
-    align-items: center;
+    padding: 0;
+    margin: 0;
 }
-nav a {
-    color: #243B9A;                     /* MÀU CHỮ GIỐNG HÌNH */
+.navbar a {
     text-decoration: none;
     font-size: 18px;
+    font-weight: 600;
+    color: #333;
 }
-nav .item {
-    position: relative;
-    cursor: pointer;
-}
-/* Dấu mũi ▼ */
-nav .item span {
-    font-size: 14px;
-    margin-left: 5px;
-}
-/* ====== MENU XỔ XUỐNG ====== */
+/* --- DROPDOWN --- */
 .dropdown {
-    position: absolute;
-    top: 45px;
-    left: -20px;
-    width: 330px;
-    background: #fff;
-    padding: 25px;
-    border: 1px solid #e5e5e5;
+    position: relative;
+}
+.dropdown-menu {
     display: none;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.08);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: white;
+    width: 260px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 2px;
 }
-.dropdown li {
-    list-style: none;
-    padding: 15px 0;
+.dropdown-menu li {
+    padding: 12px 0;
     font-size: 19px;
-    color: #777;                     /* MÀU CHỮ XÁM GIỐNG HÌNH */
-    border-bottom: 1px solid #ececec;
+    color: #777;
+    border-bottom: 1px solid #e5e5e5;
 }
-.dropdown li:last-child {
+.dropdown-menu li:last-child {
     border-bottom: none;
 }
 /* Hiện dropdown khi hover */
-.item:hover .dropdown {
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 </style>
@@ -341,6 +336,7 @@ nav .item span {
     </main>
   </div>
 </body>
+
 
 
 
