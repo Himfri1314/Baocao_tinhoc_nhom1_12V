@@ -13,12 +13,12 @@ body {
 .navbar {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: fit-content; /* Giữ navbar gọn gàng */
 }
-.nav-links {
-    list-style: none;
+.nav-container {
     display: flex;
-    margin: 0;
-    padding: 0;
+    position: relative;
 }
 .nav-item {
     padding: 15px 20px;
@@ -26,9 +26,10 @@ body {
     color: #555;
     text-transform: uppercase;
     font-size: 14px;
-    position: relative; /* Quan trọng cho dropdown */
+    text-decoration: none; /* Bỏ gạch chân link */
     display: flex;
     align-items: center;
+    position: relative;
 }
 .nav-item:hover {
     color: #000;
@@ -44,39 +45,35 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #6699CC;
+    background-color: #6699CC; /* Màu cam */
 }
-/* Thêm mũi tên chỉ xuống cho mục có dropdown (như trong hình) */
-.has-dropdown::after {
-    content: '⌵'; /* Ký tự mũi tên nhỏ */
+.dropdown-icon {
     margin-left: 5px;
     font-size: 10px;
     color: #999;
 }
-/* Dropdown Menu Styling */
-.dropdown-menu {
-    display: block; /* Hiển thị menu */
+/* Dropdown Content Styling (Hiển thị ngay dưới tab active) */
+.dropdown-content {
+    display: block; /* Hiển thị nội dung dropdown */
     position: absolute;
-    top: 100%; /* Đặt ngay bên dưới nav-item */
-    left: 0;
+    top: 100%; /* Đặt ngay bên dưới nav-container */
+    left: 0; /* Căn lề trái theo nav-container */
     background-color: #fff;
-    list-style: none;
-    padding: 0;
-    margin: 0;
     min-width: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
+    border-top: 1px solid #eee; /* Đường viền trên */
 }
-.dropdown-menu li a {
-    text-decoration: none;
+.dropdown-content a {
     color: #666;
     padding: 12px 20px;
+    text-decoration: none;
     display: block;
     border-bottom: 1px solid #eee;
     font-size: 16px;
     text-transform: none; /* Bỏ uppercase cho các mục con */
 }
-.dropdown-menu li a:hover {
+.dropdown-content a:hover {
     background-color: #f9f9f9;
     color: #000;
 }
@@ -363,8 +360,3 @@ body {
     </main>
   </div>
 </body>
-
-
-
-
-
