@@ -57,22 +57,19 @@
     color: #333;
 }
 </style>
-<nav class="navbar">
-    <ul>
-       <li class="dropdown">
-  <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/" style="text-decorating: none; padding: 0 10px;">TRANG CHỦ</a>
-     <li class="dropdown">
-      <a href="#">THÀNH VIÊN</a>
-        <ul class="dropdown-menu">
+<nav>
+    <div class="item">
+        <a>THÀNH VIÊN</a>
+        <ul class="dropdown">
             <a href="#">PHƯƠNG DUYÊN</a>
             <a href="#">MINH CHÂU</a>
             <a href="#">KHẢ HÂN</a>
             <a href="#">QUỲNH NHƯ</a>
         </ul>
-     </li>
-    <li class="dropdown">
-        <a href="#">TÀI LIỆU</a>
-        <ul class="dropdown-menu">
+    </div>
+    <div class="item">
+        <a>TÀI LIỆU</a>
+        <ul class="dropdown">
             <a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a>
             <a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a>
             <a href="https://himfri1314.github.io/bai9_nhom1/">BÀI 9</a>
@@ -86,8 +83,7 @@
             <a href="#">BÀI 17</a>
             <a href="#">BÀI 18</a>
         </ul>
-    </li>
-    </ul>
+    </div>
 </nav>
     <style>
     /* Đổi màu chữ menu chính */
@@ -120,22 +116,18 @@
     <style>
       /* Nền ảnh */
       body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    color: #2a4d69;
-    background-image: url("img/hoa1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 0.3s;
+    background-image: url("hoa1.png"); 
+    background-size: cover;        /* ảnh phủ kín */
+    background-repeat: no-repeat;  /* không lặp */
+    background-position: center;   /* canh giữa */
 }
     a { text-decoration: none; }
       /* Banner */
 .banner {
     width: 100%;
     height: 230px;
-    background-image: url("images/cute1.jpg");
+    background-image: url("cute1.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -352,6 +344,7 @@
     </main>
   </div>
 </body>
+
 
 
 
