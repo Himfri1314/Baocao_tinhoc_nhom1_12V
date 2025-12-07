@@ -337,3 +337,91 @@ body {
     </main>
   </div>
 </body>
+<div class="feedback-form-container">
+    <h2>FORM Ý KIẾN</h2>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <input type="text" id="fullname" name="fullname" placeholder="Họ & tên">
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email (không bắt buộc)">
+        </div>
+        <div class="form-group">
+            <select id="response_type" name="response_type">
+                <option value="" disabled selected hidden>Phản hồi</option>
+                <option value="complaint">Khiếu nại</option>
+                <option value="question">Câu hỏi</option>
+                <option value="other">Khác</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <textarea id="content" name="content" placeholder="Nội dung"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Gửi</button>
+    </form>
+</div>
+<style>
+  /* Khung form */
+.feedback-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto; /* Không dùng flex toàn trang */
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* Tiêu đề */
+.feedback-form-container h2 {
+    font-size: 24px;
+    color: #243B9A;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    text-align: center;
+}
+/* Nhóm input */
+.form-group {
+    margin-bottom: 20px;
+}
+/* Kiểu chung cho input + select + textarea */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+/* Hiệu ứng focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #897A75;
+    outline: none;
+}
+/* Textarea */
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+/* Nút gửi */
+.submit-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #C5938A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.submit-button:hover {
+    background-color: #b38880;
+}
+</style>
