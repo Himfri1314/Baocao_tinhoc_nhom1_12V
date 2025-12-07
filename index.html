@@ -9,53 +9,54 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-/* ===== THANH MENU CHÍNH ===== */
-.navbar {
-    display: flex;
-    gap: 60px;
+/* ====== MENU CHÍNH ====== */
+nav {
+    background: white;
     padding: 15px 40px;
-    background: #fff;
+    display: flex;
+    gap: 40px;
     font-weight: bold;
+    align-items: center;
 }
-.nav-item {
+nav a {
+    color: #243B9A;                     /* MÀU CHỮ GIỐNG HÌNH */
+    text-decoration: none;
+    font-size: 18px;
+}
+nav .item {
     position: relative;
     cursor: pointer;
 }
-.nav-item > a {
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
+/* Dấu mũi ▼ */
+nav .item span {
+    font-size: 14px;
+    margin-left: 5px;
 }
-/* ===== MENU CON (dropdown) ===== */
+/* ====== MENU XỔ XUỐNG ====== */
 .dropdown {
     position: absolute;
     top: 45px;
-    left: 0;
+    left: -20px;
     width: 330px;
     background: #fff;
     padding: 25px;
-    border: 1px solid #ddd;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-    /* hiệu ứng trượt */
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
+    border: 1px solid #e5e5e5;
+    display: none;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.08);
 }
-/* khi hover mở ra */
-.nav-item:hover .dropdown {
-    max-height: 600px;   /* đủ để mở hết 4 dòng */
-}
-/* ===== MỤC BÊN TRONG MENU CON ===== */
 .dropdown li {
     list-style: none;
     padding: 15px 0;
     font-size: 19px;
-    color: #666;
-    border-bottom: 1px solid #eee;
+    color: #777;                     /* MÀU CHỮ XÁM GIỐNG HÌNH */
+    border-bottom: 1px solid #ececec;
 }
 .dropdown li:last-child {
     border-bottom: none;
+}
+/* Hiện dropdown khi hover */
+.item:hover .dropdown {
+    display: block;
 }
 </style>
 </body>
@@ -64,7 +65,7 @@ body {
       <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">TRANG CHỦ</a>
        </div>
         <div class="menu-item">
-            THÀNH VIÊN ▼
+            THÀNH VIÊN
             <div class="dropdown">
                 <a href="#">PHƯƠNG DUYÊN</a>
                 <a href="#">MINH CHÂU</a>
@@ -73,7 +74,7 @@ body {
             </div>
         </div>
         <div class="menu-item">
-            TÀI LIỆU ▼
+            TÀI LIỆU
             <div class="dropdown">
                 <a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a>
                 <a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a>
@@ -340,5 +341,6 @@ body {
     </main>
   </div>
 </body>
+
 
 
