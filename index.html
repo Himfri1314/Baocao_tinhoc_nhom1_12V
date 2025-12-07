@@ -5,53 +5,80 @@
   </head>
   <body>
   <style>
-/* Thanh menu */
-.navbar {
-    background: white;
-    padding: 15px 20px;
-    font-family: Arial;
-    border-bottom: 1px solid #eee;
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
 }
-.navbar ul {
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative; /* Quan trọng cho dropdown */
+    display: flex;
+    align-items: center;
+}
+.nav-item:hover {
+    color: #000;
+}
+/* Tab active có đường kẻ màu cam bên dưới */
+.nav-item.active {
+    color: #000;
+}
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #6699CC;
+}
+/* Thêm mũi tên chỉ xuống cho mục có dropdown (như trong hình) */
+.has-dropdown::after {
+    content: '⌵'; /* Ký tự mũi tên nhỏ */
+    margin-left: 5px;
+    font-size: 10px;
+    color: #999;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: block; /* Hiển thị menu */
+    position: absolute;
+    top: 100%; /* Đặt ngay bên dưới nav-item */
+    left: 0;
+    background-color: #fff;
+    list-style: none;
     padding: 0;
     margin: 0;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
-.navbar a {
+.dropdown-menu li a {
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-}
-/* --- DROPDOWN --- */
-.dropdown {
-    position: relative;
-}
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background: white;
-    width: 260px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 2px;
-}
-.dropdown-menu li {
-    padding: 12px 0;
-    font-size: 19px;
-    color: #777;
-    border-bottom: 1px solid #e5e5e5;
-}
-.dropdown-menu li:last-child {
-    border-bottom: none;
-}
-/* Hiện dropdown khi hover */
-.dropdown:hover .dropdown-menu {
+    color: #666;
+    padding: 12px 20px;
     display: block;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    text-transform: none; /* Bỏ uppercase cho các mục con */
+}
+.dropdown-menu li a:hover {
+    background-color: #f9f9f9;
+    color: #000;
 }
 </style>
 </body>
@@ -336,6 +363,7 @@
     </main>
   </div>
 </body>
+
 
 
 
