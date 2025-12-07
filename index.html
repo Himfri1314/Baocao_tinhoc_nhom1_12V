@@ -5,86 +5,91 @@
   </head>
   <body>
   <style>
-/* Thanh menu */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* ===== THANH MENU CHÍNH ===== */
 .navbar {
     display: flex;
-    gap: 30px;
-    font-size: 18px;
+    gap: 60px;
+    padding: 15px 40px;
+    background: #fff;
     font-weight: bold;
-    padding: 15px 30px;
-    background: white;
 }
 .nav-item {
     position: relative;
     cursor: pointer;
-    color: #F3F3F4;
 }
-/* Icon mũi tên ▼ */
-.nav-item::after {
-    content: " ▼";
-    font-size: 12px;
-}
-/* Menu con */
-.dropdown {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 260px;
-    background: white;
-    border-radius: 3px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    display: none;
-}
-/* Hiển thị khi hover */
-.nav-item:hover .dropdown {
-    display: block;
-}
-/* Từng mục bên trong */
-.dropdown a {
-    display: block;
-    color:#F3F3F4;
-    font-size: 17px;
-    padding: 12px 0;
+.nav-item > a {
+    color: #333;
+    font-size: 18px;
     text-decoration: none;
 }
-/* Gạch mảnh */
-.dropdown a:not(:last-child) {
-    border-bottom: 1px solid #e6e6e6;
+/* ===== MENU CON (dropdown) ===== */
+.dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 330px;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    /* hiệu ứng trượt */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
 }
-/* Hiệu ứng hover */
-.dropdown a:hover {
-    color: #333;
+/* khi hover mở ra */
+.nav-item:hover .dropdown {
+    max-height: 600px;   /* đủ để mở hết 4 dòng */
+}
+/* ===== MỤC BÊN TRONG MENU CON ===== */
+.dropdown li {
+    list-style: none;
+    padding: 15px 0;
+    font-size: 19px;
+    color: #666;
+    border-bottom: 1px solid #eee;
+}
+.dropdown li:last-child {
+    border-bottom: none;
 }
 </style>
-<nav>
-    <div class="item">
-        <a>THÀNH VIÊN</a>
+</head>
+<body>
+<div class="navbar">
+    <div class="nav-item">
+      <a href="https://himfri1314.github.io/Baocao_tinhoc_nhom1_12V/">TRANG CHỦ</a>
+    </div>
+    <div class="nav-item">
+        <a href="#">THÀNH VIÊN ▼</a>
         <ul class="dropdown">
-            <a href="#">PHƯƠNG DUYÊN</a>
-            <a href="#">MINH CHÂU</a>
-            <a href="#">KHẢ HÂN</a>
-            <a href="#">QUỲNH NHƯ</a>
+            <li><a href="#">PHƯƠNG DUYÊN</a></li>
+            <li><a href="#">MINH CHÂU</a></li>
+            <li><a href="#">KHẢ HÂN</a></li>
+            <li><a href="#">QUỲNH NHƯ</a></li>
         </ul>
     </div>
-    <div class="item">
-        <a>TÀI LIỆU</a>
+    <div class="nav-item">
+        <a href="#">TÀI LIỆU ▼</a>
         <ul class="dropdown">
-            <a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a>
-            <a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a>
-            <a href="https://himfri1314.github.io/bai9_nhom1/">BÀI 9</a>
-            <a href="https://himfri1314.github.io/bai10_nhom1/">BÀI 10</a>
-            <a href="https://himfri1314.github.io/bai11_nhom1/">BÀI 11</a>
-            <a href="#">BÀI 12</a>
-            <a href="#">BÀI 13</a>
-            <a href="#">BÀI 14</a>
-            <a href="#">BÀI 15</a>
-            <a href="#">BÀI 16</a>
-            <a href="#">BÀI 17</a>
-            <a href="#">BÀI 18</a>
+            <li><a href="https://himfri1314.github.io/bai7_nhom1/">BÀI 7</a></li>
+            <li><a href="https://himfri1314.github.io/bai8_nhom1/">BÀI 8</a></li>
+            <li><a href="https://himfri1314.github.io/bai9_nhom1/">BÀI 9</a></li>
+            <li><a href="https://himfri1314.github.io/bai10_nhom1/">BÀI 10</a></li>
+            <li><a href="https://himfri1314.github.io/bai11_nhom1/">BÀI 11</a></li>
+            <li><a href="#">BÀI 12</a></li>
+            <li><a href="#">BÀI 13</a></li>
+            <li><a href="#">BÀI 14</a></li>
+            <li><a href="#">BÀI 15</a></li>
+            <li><a href="#">BÀI 16</a></li>
+            <li><a href="#">BÀI 17</a></li>
+            <li><a href="#">BÀI 18</a></li>
         </ul>
     </div>
-</nav>
+</body>
     <style>
     /* Đổi màu chữ menu chính */
 .navbar a {
@@ -344,6 +349,7 @@
     </main>
   </div>
 </body>
+
 
 
 
