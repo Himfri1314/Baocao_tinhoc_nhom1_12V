@@ -357,28 +357,12 @@ body {
                 <option value="other">Khác</option>
             </select>
         </div>
-        <form action="mailto:example@gmail.com" method="post">
-    <input type="text" name="noidung">
-    <button type="submit">Gửi</button>
+        <form action="duyen041208@gmail.com" method="post">
+          <div class="form-group">
+            <textarea id="content" name="content" placeholder="Nội dung"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Gửi</button>
         </form>
-      <div id="thongbao">
-    <img src="thanks.jpg" width="20" style="vertical-align: middle;">
-    Ý kiến của bạn đã được ghi nhận!
-</div>
-<script>
-function kiemTraForm(event) {
-    event.preventDefault(); // không reload trang
-
-    let ten = document.getElementById("ten").value;
-    let email = document.getElementById("email").value;
-
-    if (ten !== "" && email !== "") {
-        document.getElementById("thongbao").style.display = "block";
-    } else {
-        alert("Nhập cho đủ thông tin vào!");
-    }
-}
-</script>
     </form>
 </div>
 <style>
@@ -386,7 +370,7 @@ function kiemTraForm(event) {
 .feedback-form-container {
     width: 100%;
     max-width: 600px;
-    margin: 100px auto; /* Không dùng flex toàn trang */
+    margin: 40px auto; /* Không dùng flex toàn trang */
     background-color: white;
     padding: 30px;
     border-radius: 12px;
@@ -471,6 +455,7 @@ function kiemTraForm(event) {
     margin: 5px 0;
 }
 </style>
+
 
 
 
